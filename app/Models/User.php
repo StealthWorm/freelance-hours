@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+// php artisan model:show User
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
@@ -14,7 +15,8 @@ class User extends Authenticatable
 
     /**
      * The attributes that are mass assignable.
-     *
+     * Proteção do Laravel para atribuições em massa de atributos,
+     * onde ele só permite modificações (array de atribs), quando conter apenas esses dados
      * @var array<int, string>
      */
     protected $fillable = [
